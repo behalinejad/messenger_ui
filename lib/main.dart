@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:messenger_app_ui/core/theme_data.dart';
-import 'package:messenger_app_ui/presentation/group_chat.dart';
+import 'package:messenger_app_ui/presentation/group_chat_page.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {

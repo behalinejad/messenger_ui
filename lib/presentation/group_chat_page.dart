@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:messenger_app_ui/core/constants.dart';
 import 'package:messenger_app_ui/core/theme_data.dart';
-import 'package:messenger_app_ui/presentation/CustomWidgets/groupChatIcon.dart';
-import 'package:messenger_app_ui/presentation/CustomWidgets/groupNameStatusWidget.dart';
+import 'package:messenger_app_ui/presentation/custom_widgets/groupChatIcon.dart';
+import 'package:messenger_app_ui/presentation/custom_widgets/groupNameStatusWidget.dart';
+import 'package:messenger_app_ui/presentation/group_chat_body.dart';
 import 'package:sizer/sizer.dart';
 
 class GroupChat extends StatefulWidget {
@@ -21,13 +22,13 @@ class _GroupChatState extends State<GroupChat> {
       decoration: const BoxDecoration(
         image: DecorationImage(
           image: AssetImage('images/background.png'),
-          fit: BoxFit.fill
+          fit: BoxFit.cover
         ),
       ),
       child: Scaffold(
         backgroundColor: AppThemes.scaffoldBackgroundColor,
         appBar: AppBar(
-          toolbarHeight:8.h,
+          toolbarHeight:60,
           automaticallyImplyLeading: false,
           elevation: 2,
           leading:   _buildPopUpMenu(),
@@ -38,9 +39,11 @@ class _GroupChatState extends State<GroupChat> {
 
           ],
         ),
-        body: SafeArea(
+        body: const SafeArea(
 
-            child: Container()),
+            child: GroupChatBody()
+
+        ),
 
         bottomSheet:_buildFooter(),
 

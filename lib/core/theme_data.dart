@@ -3,6 +3,11 @@ import 'package:sizer/sizer.dart';
 
 class AppThemes {
 
+
+  ///  TODO App TextStyle need to be added to the Theme Data
+
+
+
   /// The AppThemes class is implemented to contain the themes related data which used inside the app
 
   static Color primaryColor = const Color.fromRGBO(226, 243, 245, 1);
@@ -20,6 +25,12 @@ class AppThemes {
   /// footer  Color
   static Color footerBackgroundColor =const Color.fromRGBO(53, 83, 115, 1);
   static Color footerTextColor =const Color.fromRGBO(255, 255, 255, 1);
+
+  /// Chat Message color
+  static Color chatMessageColor =const Color.fromRGBO(255, 255, 255, 1);
+  static Color chatMessageReplyColor =const Color.fromRGBO(34, 56, 75, 0.08);
+  static Color chatMessageNotOwnerColor =const Color.fromRGBO(233, 245, 240, 1);
+
 
 
   static final appThemeData = ThemeData(
