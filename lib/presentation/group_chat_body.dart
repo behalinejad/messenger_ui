@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:messenger_app_ui/core/api_data_simulator.dart';
 import 'package:messenger_app_ui/core/theme_data.dart';
 import 'package:messenger_app_ui/models/chat_message.dart';
@@ -22,7 +23,9 @@ class GroupChatBody extends StatelessWidget {
               padding:  const EdgeInsets.only(top: 10,bottom: 10,left: 5,right: 5),
               child: _buildMessage(ApiSimulator.mockChatMessages[index]),
             );
-          })),
+          })
+          ),
+          const SizedBox(height: 40,)
         ],
       ),
     );
@@ -87,9 +90,23 @@ class GroupChatBody extends StatelessWidget {
                   ),
                    ) : Container(),
                   Padding(
-                    padding: const EdgeInsets.only(top: 5),
+                    padding: const EdgeInsets.only(top: 5,bottom: 5),
                     child: Text(chatMessage.text,textDirection: TextDirection.rtl,),
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 5),
+                        child: Text(DateTime.parse(chatMessage.dataTime).hour.toString() + ':' + DateTime.parse(chatMessage.dataTime).minute.toString(),
+                        style: const TextStyle(fontSize: 10),),
+                      ),
+
+                      chatMessage.chatMessageStatus == MessageStatus.sent ? const Icon(LineIcons.check,color: Colors.black54,)  :
+                      chatMessage.chatMessageStatus == MessageStatus.delivered ?  const Icon(LineIcons.doubleCheck,color: Colors.black54,) :
+                       const Icon(LineIcons.doubleCheck),
+                    ],
+                  )
                 ],
               ),
             )),
