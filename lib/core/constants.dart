@@ -15,12 +15,15 @@ class AppStringsData {
   /// Text for Group chat page
   static  const member   = 'عضو';
   static  const onlineMembers   = ' نفر آنلاین ';
+  static  const footerTextFieldHelperText   = '... متن پیام ';
+
 
   /// Group Chat PopUpMenu Items
 
   static  const groupChatPopUpMenuItemsSearch   = 'جستجو';
   static  const groupChatPopUpMenuItemsMute   = 'بی صدا کردن اعلان';
   static  const groupChatPopUpMenuItemsExit   = 'خروج از گروه';
+
 
 
 }

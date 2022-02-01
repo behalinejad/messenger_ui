@@ -18,6 +18,7 @@ class GroupNameStatusWidget extends StatelessWidget {
           crossAxisAlignment: AppStringsData.currentScreenAlign == ScreenAlign.rTL ? CrossAxisAlignment.end : CrossAxisAlignment.start,
           children:   [
             Text(ApiSimulator.groupChatTitle,style: TextStyle(color: Theme.of(context).primaryColor,fontSize: 14),),
+            const SizedBox(height: 5,),
             Row(
               mainAxisAlignment:AppStringsData.currentScreenAlign == ScreenAlign.rTL ? MainAxisAlignment.end : MainAxisAlignment.start,
              children: [

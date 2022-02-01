@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:messenger_app_ui/core/constants.dart';
 import 'package:messenger_app_ui/core/theme_data.dart';
@@ -40,6 +41,12 @@ class _GroupChatState extends State<GroupChat> {
         body: SafeArea(
 
             child: Container()),
+
+        bottomSheet:_buildFooter(),
+
+
+
+
       ),
     );
   }
@@ -104,5 +111,50 @@ class _GroupChatState extends State<GroupChat> {
            ),)
        ] ;  },) ;
 
+  }
+
+  Widget _buildFooter() {
+    return Container(
+        height: 10.h,
+        decoration: BoxDecoration(
+            color: AppThemes.footerBackgroundColor
+        ),
+        child:  Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+                flex: 1,
+                child: IconButton(onPressed: (){}, icon:  Icon(Icons.emoji_emotions_outlined,color: AppThemes.footerTextColor,),)),
+
+            Expanded(
+              flex: 8,
+              child: TextField(
+                cursorColor: AppThemes.footerTextColor,
+                textAlign: TextAlign.right,
+                textDirection: TextDirection.rtl,
+                keyboardType: TextInputType.multiline,
+                minLines: 1,
+                maxLines: 20,
+
+                style: TextStyle(color:AppThemes.footerTextColor),
+                decoration: const InputDecoration(
+                  border: InputBorder.none,
+
+                  hintText: AppStringsData.footerTextFieldHelperText,
+                  //helperText: AppStringsData.footerTextFieldHelperText
+                ),
+              ),
+            ),
+            Expanded(
+                flex: 1,
+                child: IconButton(onPressed: (){}, icon:  Icon(Icons.attach_file_sharp,color: AppThemes.footerTextColor,),)),
+            Expanded(
+                flex: 1,
+                child: IconButton(onPressed: (){}, icon:  Icon(Icons.mic_none_outlined,color: AppThemes.footerTextColor,),)),
+
+
+
+            ],
+        )) ;
   }
 }
