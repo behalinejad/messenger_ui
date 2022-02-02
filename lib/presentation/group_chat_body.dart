@@ -12,23 +12,20 @@ class GroupChatBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding:  EdgeInsets.only(left: 5.sp,right: 5.sp  ),
-      child: Column(
-        children: [
+    return Column(
+      children: [
 
-          Expanded(child: ListView.builder(
-              itemCount: ApiSimulator.mockChatMessages.length,
-              itemBuilder: (context,index) {
-            return Padding(
-              padding:  const EdgeInsets.only(top: 10,bottom: 10,left: 5,right: 5),
-              child: _buildMessage(ApiSimulator.mockChatMessages[index]),
-            );
-          })
-          ),
-          const SizedBox(height: 40,)
-        ],
-      ),
+        Expanded(child: ListView.builder(
+            itemCount: ApiSimulator.mockChatMessages.length,
+            itemBuilder: (context,index) {
+          return Padding(
+            padding:  const EdgeInsets.only(top: 10,bottom: 10,left: 5,right: 5),
+            child: _buildMessage(ApiSimulator.mockChatMessages[index]),
+          );
+        })
+        ),
+        const SizedBox(height: 40,)
+      ],
     );
   }
 

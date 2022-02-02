@@ -23,7 +23,7 @@ class ApiSimulator {
        chatMessageStatus: MessageStatus.viewed,
        isSender: false,
        owner: 'سید مجید حسین پور',
-       ownerPhoto: '',
+       ownerPhoto: 'images/user1_photo.png',
        dataTime: DateTime.now().toString() ),
 
    ChatMessage(
@@ -34,7 +34,7 @@ class ApiSimulator {
        chatMessageStatus: MessageStatus.viewed,
        isSender: true,
        owner: '',
-       ownerPhoto: '',
+       ownerPhoto: 'images/user1_photo.png',
        dataTime: DateTime.now().toString() ),
 
    ChatMessage(
